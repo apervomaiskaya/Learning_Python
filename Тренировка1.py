@@ -493,7 +493,6 @@ stooge = "Curly"
 print(stooge, "says:", quotes[stooge])
 
 
-import this
 print ('hello')
 
 disaster = True
@@ -502,7 +501,8 @@ if disaster:
 else:
     print("Whee!")
 
-
+x = 7
+x == 5
 
 
 
