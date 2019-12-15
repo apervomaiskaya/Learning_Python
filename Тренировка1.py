@@ -501,10 +501,26 @@ if disaster:
 else:
     print("Whee!")
 
-x = 7
-x == 5
+#while True:
+ #       value = input("Integer, please [q to quit]: ")
+ #       if value == 'q': # выход
+ #               break
+ #       number = int(value)
+ #       if number % 2 == 0: # нечетное число
+ #               continue
+ #       print(number, "squared is", number*number)
 
-
+def commentary(color):
+        if color == 'red':
+                return "It's a tomato."
+        elif color == "green":
+                return "It's a green pepper."
+        elif color == 'bee purple':
+                return "I don't know what it is, but only bees can see it."
+        else:
+                return "I've never heard of the color " + color + "."
+comment = commentary('blue')
+print(comment)
 
 
 
