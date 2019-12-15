@@ -496,7 +496,11 @@ print(stooge, "says:", quotes[stooge])
 import this
 print ('hello')
 
-
+disaster = True
+if disaster:
+    print("Woe!")
+else:
+    print("Whee!")
 
 
 
