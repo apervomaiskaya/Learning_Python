@@ -1,23 +1,23 @@
 #import sys
 #def silly_age_joke():
-#	print('Сколько вам лет?')
-#	age = int(sys.stdin.readline())
-#	if age >= 10 and age <= 13:
-#		print('13 + 49 + 84 + 155 + 97: что получится? Головная боль!')
-#	else:
-#		print('Что-что?')
+#   print('Сколько вам лет?')
+#   age = int(sys.stdin.readline())
+#   if age >= 10 and age <= 13:
+#       print('13 + 49 + 84 + 155 + 97: что получится? Головная боль!')
+#   else:
+#       print('Что-что?')
 #silly_age_joke()
 
 #def moon_weight(ves):
-	#weight = 3
-	#for week in range (1, 53):
-    	#weight = weight+ves
-    	#print('Неделя %s, Вес: %s' % (week, moon_weight))
+    #weight = 3
+    #for week in range (1, 53):
+        #weight = weight+ves
+        #print('Неделя %s, Вес: %s' % (week, moon_weight))
 
 #def moon_weight(weight, ves):
-#	for week in range(1, 15):
-#		weight = weight + (weight*ves)/100
-#		print('Год %s, Вес в этом году: %s' % (week, weight))
+#   for week in range(1, 15):
+#       weight = weight + (weight*ves)/100
+#       print('Год %s, Вес в этом году: %s' % (week, weight))
 #moon_weight(30, 0.25)
 
 #import sys
@@ -119,45 +119,45 @@ print(gertrude.giraffe_spots)
 #jacob.forward(80)
 
 class Things:
-	pass
+    pass
 class Inanimate(Things):
-	pass
+    pass
 class Animate(Things):
-	pass
+    pass
 class Sidewalks(Inanimate):
-	pass
+    pass
 class Animals(Animate):
-	def breathe(self):
-		print('дышит')
-	def move(self):
-		print('двигается')
-	def eat_food(self):
-		print('ест')
+    def breathe(self):
+        print('дышит')
+    def move(self):
+        print('двигается')
+    def eat_food(self):
+        print('ест')
 class Mammals(Animals):
-	def feed_young_with_milk(self):
-		print('кормит детенышей молоком')
-	
+    def feed_young_with_milk(self):
+        print('кормит детенышей молоком')
+    
 class Giraffes(Mammals):
-	def eat_leaves_from_trees(self):
-		print('ест листья')
+    def eat_leaves_from_trees(self):
+        print('ест листья')
 reginald = Giraffes()
 harold = Giraffes()
 class Giraffes(Mammals):
-	def find_food(self):
-		self.move()
-		print("Я нашел еду!")
-		self.eat_food()
-	def dance_a_jig(self):
-		self.move()
-		self.move()
-		self.move()
-		self.move()
+    def find_food(self):
+        self.move()
+        print("Я нашел еду!")
+        self.eat_food()
+    def dance_a_jig(self):
+        self.move()
+        self.move()
+        self.move()
+        self.move()
 reginald = Giraffes()
 reginald.dance_a_jig()
 class Giraffes:
-	def __init__(self, spots):
-		self.giraffe_spots = spots
-		
+    def __init__(self, spots):
+        self.giraffe_spots = spots
+        
 ozwald = Giraffes(100)
 gertrude = Giraffes(150)
 print(ozwald.giraffe_spots)
@@ -471,56 +471,81 @@ def person(width, height):
     print('Моя ширина - %s, а высота - %s' % (width, height))
 person(height=3, width=4)
 
-for countdown in 5, 4, 3, 2, 1, "hey!":
-        print(countdown)
 
-cliches = [
-"At the end of the day",
-"Having said that",
-"The fact of the matter is",
-"Be that as it may",
-"The bottom line is",
-"If you will",
-]
-print(cliches[3])
+class Person():
+    def __init__(self, name):
+        self.name = name
+hunter = Person('Elmer Fudd')
+print('The mighty hunter: ', hunter.name)
 
-quotes = {
-"Moe": "A wise guy, huh?",
-"Larry": "Ow!",
-"Curly": "Nyuk nyuk!",
-}
-stooge = "Curly"
-print(stooge, "says:", quotes[stooge])
+class MDPerson(Person):
+    def __init__(self, name):
+        self.name = "Doctor " + name
+        
+class JDPerson(Person):
+    def __init__(self, name):
+        self.name = name + ", Esquire"
+        
+person = Person('Fudd')
+doctor = MDPerson('Fudd')
+lawyer = JDPerson('Fudd')
+print(person.name)
+print(doctor.name)
+print(lawyer.name)
+
+class Car():
+    def exclaim(self):
+        print("I'm a Car!")
+class Yugo(Car):
+    def exclaim(self):
+        print("I'm a Yugo! Much like a Car, but more Yugo-ish.")
+    def need_a_push(self):
+        print("A little help here?")
+give_me_a_car = Car()
+give_me_a_yugo = Yugo()
+give_me_a_yugo.need_a_push()
+#give_me_a_yugo.exclaim()
+
+class Circle():
+    def __init__(self, radius):
+        self.radius = radius
+    @property
+    def diameter(self):
+        return 2 * self.radius
+c = Circle(5)
+c.radius = 7
+print(c.diameter)
+
+class A():
+    count = 0
+    def __init__(self):
+        A.count += 1
+    def exclaim(self):
+        print("I'm an A!")
+    @classmethod
+    def kids(cls):
+        print("A has", cls.count, "little objects.")
+
+easy_a = A()
+breezy_a = A()
+wheezy_a = A()
+A.kids()
 
 
-print ('hello')
 
-disaster = True
-if disaster:
-    print("Woe!")
-else:
-    print("Whee!")
 
-#while True:
- #       value = input("Integer, please [q to quit]: ")
- #       if value == 'q': # выход
- #               break
- #       number = int(value)
- #       if number % 2 == 0: # нечетное число
- #               continue
- #       print(number, "squared is", number*number)
 
-def commentary(color):
-        if color == 'red':
-                return "It's a tomato."
-        elif color == "green":
-                return "It's a green pepper."
-        elif color == 'bee purple':
-                return "I don't know what it is, but only bees can see it."
-        else:
-                return "I've never heard of the color " + color + "."
-comment = commentary('blue')
-print(comment)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
