@@ -472,57 +472,69 @@ def person(width, height):
 person(height=3, width=4)
 
 
+class Person():
+    def __init__(self, name):
+        self.name = name
+hunter = Person('Elmer Fudd')
+print('The mighty hunter: ', hunter.name)
+
+class MDPerson(Person):
+    def __init__(self, name):
+        self.name = "Doctor " + name
+        
+class JDPerson(Person):
+    def __init__(self, name):
+        self.name = name + ", Esquire"
+        
+person = Person('Fudd')
+doctor = MDPerson('Fudd')
+lawyer = JDPerson('Fudd')
+print(person.name)
+print(doctor.name)
+print(lawyer.name)
+
+class Car():
+    def exclaim(self):
+        print("I'm a Car!")
+class Yugo(Car):
+    def exclaim(self):
+        print("I'm a Yugo! Much like a Car, but more Yugo-ish.")
+    def need_a_push(self):
+        print("A little help here?")
+give_me_a_car = Car()
+give_me_a_yugo = Yugo()
+give_me_a_yugo.need_a_push()
+#give_me_a_yugo.exclaim()
+
+class Circle():
+    def __init__(self, radius):
+        self.radius = radius
+    @property
+    def diameter(self):
+        return 2 * self.radius
+c = Circle(5)
+c.radius = 7
+print(c.diameter)
+
+class A():
+    count = 0
+    def __init__(self):
+        A.count += 1
+    def exclaim(self):
+        print("I'm an A!")
+    @classmethod
+    def kids(cls):
+        print("A has", cls.count, "little objects.")
+
+easy_a = A()
+breezy_a = A()
+wheezy_a = A()
+A.kids()
 
 
 
 
 
-
-
-
-from tkinter import *
-import random
-import time
-class Ball:
-    def __init__(self, canvas, color):
-        self.canvas = canvas
-        self.id = canvas.create_oval(10, 10, 25, 25, fill=color)
-        self.canvas.move(self.id, 245, 100)
-        self.x = 0
-        self.y = -1
-        starts = [-3, -2, -1, 1, 2, 3]
-        random.shuffle(starts)
-        self.x = starts[0]
-        self.y = -3
-        self.canvas_height = self.canvas.winfo_height()
-        self.canvas_width = self.canvas.winfo_width()
-    def draw(self):
-        self.canvas.move(self.id, self.x, self.y)
-        pos = self.canvas.coords(self.id)
-        if pos[1] <= 0:
-            self.y = 3
-        if pos[3] >= self.canvas_height:
-            self.y = -3
-        if pos[0] <= 0:
-            self.x = 3
-        if pos[2] >= self.canvas_width:
-                self.x = -3
-tk = Tk()
-tk.title("Игра")
-tk.resizable(0, 0)
-tk.wm_attributes("-topmost", 1)
-canvas = Canvas(tk, width=500, height=400, bd=0,
-highlightthickness=0)
-canvas.pack()
-tk.update()
-
-ball = Ball(canvas, 'red')
-
-while 1:
-    ball.draw()
-    tk.update_idletasks()
-    tk.update()
-    time.sleep(0.01)
 
 
 
