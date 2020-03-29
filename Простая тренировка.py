@@ -689,10 +689,20 @@
 #     finished_sandwiches.remove('pastrami')
 # print(finished_sandwiches)
 
-def greet_user():
+def greet_user(username):
 #Выводит простое приветствие."""
-    print("Hello!")
-greet_user()
+    print('Hello,', username + '!')
+greet_user('Олег')
+
+def display_message():
+    print('В этой теме рассматриваются функции.')
+display_message()
+
+def favorite_book(title):
+    print('Одна из моих любимых книг - ', title + '.')
+
+favorite_book('Маленькая жизнь')
+
 
 
 
