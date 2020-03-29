@@ -646,50 +646,53 @@
 
 # Начинаем с двух списков: пользователей для проверки
 # и пустого списка для хранения проверенных пользователей.
-unconfirmed_users = ['alice', 'brian', 'candace']
-confirmed_users = []
+# unconfirmed_users = ['alice', 'brian', 'candace']
+# confirmed_users = []
 
-while unconfirmed_users:
-    current_user = unconfirmed_users.pop()
-    print('Проверка пользователя: ', current_user.title())
-    confirmed_users.append(current_user)
+# while unconfirmed_users:
+#     current_user = unconfirmed_users.pop()
+#     print('Проверка пользователя: ', current_user.title())
+#     confirmed_users.append(current_user)
+#
+# print('\nСледующие пользователи был подтверждены: ')
+# for confirmed_user in confirmed_users:
+#     print(confirmed_user.title())
+#
+# print()
+#
+# pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+# print(pets)
+#
+# while 'cat' in pets:
+#     pets.remove('cat')
+# print(pets)
+#
+# print()
 
-print('\nСледующие пользователи был подтверждены: ')
-for confirmed_user in confirmed_users:
-    print(confirmed_user.title())
+# sandwich_orders = ['сыр', 'pastrami', 'говядина', 'pastrami', 'курица', 'свинина', 'pastrami', 'тунец']
+# finished_sandwiches = []
+# print('К сожалению, пастрами больше нет.')
+# while 'pastrami' in sandwich_orders:
+#     sandwich_orders.remove('pastrami')
+# print(sandwich_orders)
+#
+# while sandwich_orders:
+#     sandwich_order = sandwich_orders.pop()
+#     print('Я сделаю вам ' + sandwich_order + ' сэндвич')
+#     finished_sandwiches.append(sandwich_order)
+#
+# print('Готовые сэндвичи с: ')
+# for finished_sandwich in finished_sandwiches:
+#     print(finished_sandwich)
+#
+# while 'pastrami' in finished_sandwiches:
+#     finished_sandwiches.remove('pastrami')
+# print(finished_sandwiches)
 
-print()
-
-pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
-print(pets)
-
-while 'cat' in pets:
-    pets.remove('cat')
-print(pets)
-
-print()
-
-sandwich_orders = ['сыр', 'pastrami', 'говядина', 'pastrami', 'курица', 'свинина', 'pastrami', 'тунец']
-finished_sandwiches = []
-print('К сожалению, пастрами больше нет.')
-while 'pastrami' in sandwich_orders:
-    sandwich_orders.remove('pastrami')
-print(sandwich_orders)
-
-while sandwich_orders:
-    sandwich_order = sandwich_orders.pop()
-    print('Я сделаю вам ' + sandwich_order + ' сэндвич')
-    finished_sandwiches.append(sandwich_order)
-
-print('Готовые сэндвичи с: ')
-for finished_sandwich in finished_sandwiches:
-    print(finished_sandwich)
-
-while 'pastrami' in finished_sandwiches:
-    finished_sandwiches.remove('pastrami')
-print(finished_sandwiches)
-
-
+def greet_user():
+#Выводит простое приветствие."""
+    print("Hello!")
+greet_user()
 
 
 
