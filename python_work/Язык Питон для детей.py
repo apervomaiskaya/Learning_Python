@@ -436,6 +436,34 @@ def lots_of_numbers(max):
         print('Прошло %s секунд' % (t2-t1))
 lots_of_numbers(100)
 
+class Laser:
+    def does(self):
+        return 'разрушать'
+class Claw:
+    def does(self):
+        return 'раздавить'
+class SmartPhone:
+    def does(self):
+        return 'звонить'
+
+
+class Robot:
+    def __init__(self):
+        self.laser = Laser()
+        self.claw = Claw()
+        self.smartphone = SmartPhone()
+        
+    def does(self):
+        return '''У меня много вложений:
+Мой лазер, to %s.
+Мой коготь, to %s.
+Мой смартфон, to %s. ''' % (
+    self.laser.does(),
+    self.claw.does(),
+    self.smartphone.does())
+    
+robbie = Robot()
+print(robbie.does())
 
 
 
@@ -446,23 +474,5 @@ lots_of_numbers(100)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print ('Привет, мир!')
 
 
