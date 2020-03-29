@@ -700,18 +700,39 @@ display_message()
 
 def favorite_book(title):
     print('Одна из моих любимых книг - ', title + '.')
-
 favorite_book('Маленькая жизнь')
 
+print()
 
+def describe_pet(animal_type, pet_name):
+#Выводит информацию о животном."""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name.title()}.")
+describe_pet('hamster', 'harry')
+describe_pet('dog', 'willie')
+describe_pet(animal_type='hamster', pet_name='harry')
 
+def make_shirt(size, text):
+    print('\nРазмер этой футболки: ', size,)
+    print('Текст на этой футболке: ', text)
 
+make_shirt('46', 'Какая крутая футболка!')
+make_shirt(text='Новый крутой текст!', size='48')
 
+def make_shirt(size = 'S', text = 'I love Python'):
+    print('\nРазмер этой футболки: ', size,)
+    print('Текст на этой футболке: ', text)
 
+make_shirt()
 
+print()
 
+def describe_city(city, country='Россия'):
+    print(city, 'находится в', country)
 
-
+describe_city('Москва')
+describe_city('Хабаровск')
+describe_city('Санья', 'Китай')
 
 
 
