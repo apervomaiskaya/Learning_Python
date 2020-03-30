@@ -819,7 +819,12 @@ print(x)
 
 print()
 
+def make_album(name_artist, title_album):
+    album = {'Имя исполнителя': name_artist, 'Название альбома': title_album}
+    return album
 
+a1 = make_album('Жуков', 'В поисках')
+print(a1)
 
 
 
