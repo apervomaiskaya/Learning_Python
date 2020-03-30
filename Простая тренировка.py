@@ -767,13 +767,39 @@ print(musician)
 musician = get_formatted_name('john', 'hooker', 'lee')
 print(musician)
 
+def build_person(first_name, last_name):
+    person = {'first' : first_name, 'last': last_name}
+    return person
+musician = build_person('jimi', 'hendrix')
+print(musician)
 
+def build_person(first_name, last_name, age=''):
+    person = {'first' : first_name, 'last': last_name}
+    if age:
+        person['age'] = age
+    return person
+musician = build_person('jimi', 'hendrix', age=27)
+print(musician)
 
+def get_formatted_name(first_name, last_name):
+#Возвращает аккуратно отформатированное полное имя."""
+    full_name = f'{first_name} {last_name}'
+    return full_name.title()
 
+while True:
+    print('\nНапишите, пожалуйста, своё имя: ')
+    print('(напишите "выход", чтобы выйти)')
 
+    f_name = input('Имя: ')
+    if f_name == 'выход':
+        break
+    l_name = input('Фамилия: ')
+    if l_name == 'выход':
+        break
+    formatted_name = get_formatted_name(f_name, l_name)
+    print(f'\nПривет, {formatted_name}!')
 
-
-
+print()
 
 
 
