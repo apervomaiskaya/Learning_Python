@@ -819,15 +819,74 @@ print(x)
 
 print()
 
-def make_album(name_artist, title_album):
-    album = {'Имя исполнителя': name_artist, 'Название альбома': title_album}
+def make_album(name_artist, title_album, tracks = ''):
+    if tracks:
+        album = {'Имя исполнителя': name_artist, 'Название альбома': title_album, 'Количество треков': tracks}
+    else:
+        album = {'Имя исполнителя': name_artist, 'Название альбома': title_album}
     return album
 
-a1 = make_album('Жуков', 'В поисках')
+a1 = make_album('Жуков', 'В поисках', '10')
 print(a1)
 
+print()
 
+# def get_formatted_name(first_name, last_name):
+# #Возвращает аккуратно отформатированное полное имя."""
+#     full_name = f"{first_name} {last_name}"
+#     return full_name.title()
+# while True:
+#     print("\nPlease tell me your name:")
+#     print("(enter 'q' at any time to quit)")
+#     f_name = input("First name: ")
+#     if f_name == 'q':
+#         break
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print(f"\nHello, {formatted_name}!")
 
+# def make_album(author, name_of_album):
+#     album = author + ' ' + name_of_album
+#     return album
+#
+# while True:
+#     print('\nПожалуйста, введите имя автора:')
+#     print('(введите "в", чтобы выйти)')
+#
+#     a_name = input('Имя автора: ')
+#     if a_name == 'в':
+#         break
+#
+#     print('\nПожалуйста, введите название альбома: ')
+#     print('(введите "в", чтобы выйти)')
+#
+#     al_name = input('Название альбома: ')
+#     if al_name == 'в':
+#         break
+#
+#     album = make_album(a_name, al_name)
+#     print('\nВы любите, ' + album + '!')
+#     print('\nВы любите ' + a_name.title() + ' и его альбом ' + al_name.title())
+
+def make_album(name_artist, title_album):
+    album_name = name_artist + ' ' + title_album
+    return album_name.title()
+
+while True:
+    print('Наберите "выход", чтобы выйти.')
+
+    n_artist = input('Введите название исполнителя: ')
+    if n_artist == 'выход':
+        break
+
+    t_album = input('Введите название альбома: ')
+    if t_album == 'выход':
+        break
+
+    a3 = make_album(n_artist, t_album)
+    print(a3)
 
 
 
