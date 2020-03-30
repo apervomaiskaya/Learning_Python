@@ -781,35 +781,43 @@ def build_person(first_name, last_name, age=''):
 musician = build_person('jimi', 'hendrix', age=27)
 print(musician)
 
-def get_formatted_name(first_name, last_name):
-#Возвращает аккуратно отформатированное полное имя."""
-    full_name = f'{first_name} {last_name}'
-    return full_name.title()
-
-while True:
-    print('\nНапишите, пожалуйста, своё имя: ')
-    print('(напишите "выход", чтобы выйти)')
-
-    f_name = input('Имя: ')
-    if f_name == 'выход':
-        break
-    l_name = input('Фамилия: ')
-    if l_name == 'выход':
-        break
-    formatted_name = get_formatted_name(f_name, l_name)
-    print(f'\nПривет, {formatted_name}!')
+# def get_formatted_name(first_name, last_name):
+# #Возвращает аккуратно отформатированное полное имя."""
+#     full_name = f'{first_name} {last_name}'
+#     return full_name.title()
+#
+# while True:
+#     print('\nНапишите, пожалуйста, своё имя: ')
+#     print('(напишите "выход", чтобы выйти)')
+#
+#     f_name = input('Имя: ')
+#     if f_name == 'выход':
+#         break
+#     l_name = input('Фамилия: ')
+#     if l_name == 'выход':
+#         break
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print(f'\nПривет, {formatted_name}!')
 
 print()
 
+def city_country(city, country):
+    full_name = city + ', ' + country
+    return full_name.title()
 
+a = city_country('santiago', 'chile')
+print(a)
 
+def city_country3(city3, country3):
+    a3 = city3 + ', ' + country3
+    return a3.title()
 
+x = city_country3('калининград', 'россия')
+x = city_country3('владивосток', 'россия')
+x = city_country3('санья', 'китай')
+print(x)
 
-
-
-
-
-
+print()
 
 
 
