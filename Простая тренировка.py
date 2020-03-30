@@ -344,7 +344,7 @@
 # 	elif str(i) == '3':
 # 		print(str(i) + 'rd')
 # 	else:
-		# print(str(i) + 'th')
+# print(str(i) + 'th')
 
 # alien_0 = {'color': 'green', 'points': 5}
 # print(alien_0['color'])
@@ -690,54 +690,82 @@
 # print(finished_sandwiches)
 
 def greet_user(username):
-#Выводит простое приветствие."""
+    # Выводит простое приветствие."""
     print('Hello,', username + '!')
+
+
 greet_user('Олег')
+
 
 def display_message():
     print('В этой теме рассматриваются функции.')
+
+
 display_message()
+
 
 def favorite_book(title):
     print('Одна из моих любимых книг - ', title + '.')
+
+
 favorite_book('Маленькая жизнь')
 
 print()
 
+
 def describe_pet(animal_type, pet_name):
-#Выводит информацию о животном."""
+    # Выводит информацию о животном."""
     print(f"\nI have a {animal_type}.")
     print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+
 describe_pet('hamster', 'harry')
 describe_pet('dog', 'willie')
 describe_pet(animal_type='hamster', pet_name='harry')
 
+
 def make_shirt(size, text):
-    print('\nРазмер этой футболки: ', size,)
+    print('\nРазмер этой футболки: ', size, )
     print('Текст на этой футболке: ', text)
+
 
 make_shirt('46', 'Какая крутая футболка!')
 make_shirt(text='Новый крутой текст!', size='48')
 
-def make_shirt(size = 'S', text = 'I love Python'):
-    print('\nРазмер этой футболки: ', size,)
+
+def make_shirt(size='S', text='I love Python'):
+    print('\nРазмер этой футболки: ', size, )
     print('Текст на этой футболке: ', text)
+
 
 make_shirt()
 
 print()
 
+
 def describe_city(city, country='Россия'):
     print(city, 'находится в', country)
+
 
 describe_city('Москва')
 describe_city('Хабаровск')
 describe_city('Санья', 'Китай')
 
+print()
+
+def get_formatted_name(first_name, last_name, middle_name = ''):
+    # full_name = f'{first_name} {middle_name} {last_name}'
+    if middle_name:
+        full_name = f'{first_name} {middle_name} {last_name}'
+    else:
+        full_name = f'{first_name} {last_name}'
+    return full_name.title()
 
 
-
-
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
 
 
 
