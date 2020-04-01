@@ -985,7 +985,7 @@ make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 print()
 
 def build_profile(first, last, **user_info):
-#Строит словарь с информацией о пользователе."""
+#Строит словарь с информацией о пользователе.
     user_info['first_name'] = first
     user_info['last_name'] = last
     return user_info
@@ -994,10 +994,37 @@ user_profile = build_profile('albert', 'einstein',
                             field='physics')
 print(user_profile)
 
+print()
 
+def sandwichs(*toppings):
+    for topping in toppings:
+        print('Этот сэндвич с: ' + topping)
 
+sandwichs('сыр', 'говядина', 'колбаса')
 
+print()
 
+def build_profile(first, last, **user_info):
+#Строит словарь с информацией о пользователе.
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+user_profile = build_profile('Стивен', 'Хокинг',
+                            location='Оксфорд',
+                            field='физика')
+print(user_profile)
+
+def make_car(model, class_car, **car_info):
+    car_info['model'] = model
+    car_info['class_car'] = class_car
+    return car_info
+
+car = make_car('subaru', 'outback',
+               color='blue',
+               tow_package=True)
+print(car)
+
+print()
 
 
 
