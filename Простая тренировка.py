@@ -689,12 +689,11 @@
 #     finished_sandwiches.remove('pastrami')
 # print(finished_sandwiches)
 
-def greet_user(username):
-    # Выводит простое приветствие."""
-    print('Hello,', username + '!')
-
-
-greet_user('Олег')
+# def greet_user(username):
+#     # Выводит простое приветствие."""
+#     print('Hello,', username + '!')
+#
+# greet_user('Олег')
 
 
 def display_message():
@@ -870,46 +869,130 @@ print()
 #     print('\nВы любите, ' + album + '!')
 #     print('\nВы любите ' + a_name.title() + ' и его альбом ' + al_name.title())
 
-def make_album(name_artist, title_album):
-    album_name = name_artist + ' ' + title_album
-    return album_name.title()
+# def make_album(name_artist, title_album):
+#     album_name = name_artist + ' ' + title_album
+#     return album_name.title()
+#
+# while True:
+#     print('Наберите "выход", чтобы выйти.')
+#
+#     n_artist = input('Введите название исполнителя: ')
+#     if n_artist == 'выход':
+#         break
+#
+#     t_album = input('Введите название альбома: ')
+#     if t_album == 'выход':
+#         break
+#
+#     a3 = make_album(n_artist, t_album)
+#     print(a3)
 
-while True:
-    print('Наберите "выход", чтобы выйти.')
+def greet_users(names):
+    for name in names:
+        msg = 'Привет, ' + name.title() + '!'
+        print(msg)
 
-    n_artist = input('Введите название исполнителя: ')
-    if n_artist == 'выход':
-        break
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
 
-    t_album = input('Введите название альбома: ')
-    if t_album == 'выход':
-        break
+print()
 
-    a3 = make_album(n_artist, t_album)
-    print(a3)
+# Список моделей, которые необходимо напечатать.
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+# Цикл последовательно печатает каждую модель до конца списка.
+# После печати каждая модель перемещается в список completed_models.
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print(f"Printing model: {current_design}")
+    completed_models.append(current_design)
+# Вывод всех готовых моделей.
+print("\nThe following models have been printed:")
+for completed_model in completed_models:
+    print(completed_model)
 
+print()
 
+def print_models(unprinted_designs, completed_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print(f"Printing model: {current_design}")
+        completed_models.append(current_design)
 
+def show_completed_models(completed_models):
+    print("\nThe following models have been printed:")
+    for completed_model in completed_models:
+        print(completed_model)
 
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
 
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
 
+# list_of_msgs = ['текст сообщения 1',
+#                 'текст сообщения 2',
+#                 'текст сообщения 3']
+# sent_messages = []
 
+print()
+list_of_msgs = ['Привет. Давай познакомимся?',
+                'Меня зовут Олег.',
+                'Как тебя зовут?']
 
+sent_messages = []
+def show_messages(msgs):
+    for msgs in list_of_msgs:
+        a = 'Новое сообщение: ' + str(msgs)
+        print(a)
 
+show_messages(list_of_msgs)
 
+def send_messages(sent_messages):
+    while list_of_msgs:
+        current_msg = list_of_msgs.pop()
+        sent_messages.append(current_msg)
 
+def show_send_messages(sent_messages):
+    for sent_message in sent_messages:
+        print('У вас новое сообщение: ' + sent_message)
 
+send_messages(sent_messages)
+show_send_messages(sent_messages)
 
+print()
 
+def make_pizza(*toppings):
+#Вывод списка заказанных топпингов."""
+    print(toppings)
+    print('\nДелаем пиццу со следующими дополнениями: ')
+    for topping in toppings:
+        print( '-' + topping)
 
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
 
+def make_pizza(size, *toppings):
+#Вывод списка заказанных топпингов."""
+    # print(toppings)
+    print('\nДелаем пиццу следующих размеров', size, ' и дополнениями: ')
+    for topping in toppings:
+        print( '-' + topping)
 
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
+print()
 
-
-
-
-
+def build_profile(first, last, **user_info):
+#Строит словарь с информацией о пользователе."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+user_profile = build_profile('albert', 'einstein',
+                            location='princeton',
+                            field='physics')
+print(user_profile)
 
 
 
