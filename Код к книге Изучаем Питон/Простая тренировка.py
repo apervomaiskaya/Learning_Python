@@ -1045,20 +1045,47 @@ class Cat():
         self.name = name
         self.age = age
 
-    def sit(self):
-        print(self.name, 'теперь ластится!')
+    def caress(self):
+        print(self.name.title(), 'теперь ластится!')
 
-    def roll_over(self):
-        print(self.name, 'теперь мурчит!')
+    def purr(self):
+        print(self.name.title(), 'теперь мурчит!')
 
 my_cat = Cat('буся', 9)
 print('Мою кошку зовут', my_cat.name.title() + '.')
 print('Моей кошке', my_cat.age, 'лет.')
+# print(my_cat.name)
 
+my_cat.caress()
+my_cat.purr()
 
+print()
 
+your_cat = Cat('люси', 10)
+print('Твою кошку зовут', your_cat.name.title() + '.')
+print('Твоей кошке', your_cat.age, 'лет.')
+your_cat.caress()
+your_cat.purr()
 
+print()
 
+class Restaurant():
+    def __init__(self,  restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print('Этот ресторан называется', self.restaurant_name + '.')
+        print('Этот ресторан', self.cuisine_type, 'кухни.')
+
+    def open_restaurant(self):
+        print('Ресторан', self.restaurant_name, 'открыт!')
+
+restaurant = Restaurant('Пафос', 'русская')
+# print(restaurant.restaurant_name)
+# print(restaurant.cuisine_type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
 
 
 
