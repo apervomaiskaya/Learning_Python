@@ -1082,12 +1082,17 @@ class Restaurant():
         print('Ресторан', self.restaurant_name, 'открыт!')
 
 restaurant = Restaurant('Пафос', 'русская')
-# print(restaurant.restaurant_name)
-# print(restaurant.cuisine_type)
+print(restaurant.restaurant_name)
+print(restaurant.cuisine_type)
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
 
-
+restaurant = Restaurant('Пафос', 'русская')
+restaurant.describe_restaurant()
+restaurant = Restaurant('Узбек Плюс', 'узбекская')
+restaurant.describe_restaurant()
+restaurant = Restaurant('Грузинский парень', 'грузинская')
+restaurant.describe_restaurant()
 
 
 
