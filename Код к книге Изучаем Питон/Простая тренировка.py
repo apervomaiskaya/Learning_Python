@@ -1094,8 +1094,31 @@ restaurant.describe_restaurant()
 restaurant = Restaurant('Грузинский парень', 'грузинская')
 restaurant.describe_restaurant()
 
+class User():
+    def __init__(self, first_name, last_name, age, role):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.role = role
 
+    def describe_user(self):
+        print('\nМеня зовут', self.first_name.title(), self.last_name.title() + '.')
+        print('Мне' , self.age , 'лет. Моя роль в проекте - ', self.role + '.')
 
+    def greet_user(self):
+        print('Здравствуйте,', self.first_name.title(), self.last_name.title() + '!')
+
+user1 = User('олег', 'кривобоков', '36', 'админ')
+user1.describe_user()
+user1.greet_user()
+
+user2 = User('саша', 'кривобокова', '36', 'пользователь')
+user2.describe_user()
+user2.greet_user()
+
+user3 = User('ваня', 'одариченко', '30', 'пользователь')
+user3.describe_user()
+user3.greet_user()
 
 
 
