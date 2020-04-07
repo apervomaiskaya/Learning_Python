@@ -1196,7 +1196,7 @@ restaurant1 = Restaurant('Запад', 'американская')
 restaurant1.read_number_served()
 restaurant1.set_number_served(15)
 restaurant1.read_number_served()
-restaurant1.increment_number_served(120)
+restaurant1.increment_number_served(80)
 restaurant1.read_number_served()
 
 
