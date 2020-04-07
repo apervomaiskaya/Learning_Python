@@ -1038,61 +1038,61 @@
 
 # НАЧАЛ ИЗУЧАТЬ КЛАССЫ 02 АПР. 2020 Г.
 
-class Cat():
-    # Простая модель собаки
-    def __init__(self, name, age):
-        # Инициализирует атрибуты name и age
-        self.name = name
-        self.age = age
+# class Cat():
+#     # Простая модель собаки
+#     def __init__(self, name, age):
+#         # Инициализирует атрибуты name и age
+#         self.name = name
+#         self.age = age
+#
+#     def caress(self):
+#         print(self.name.title(), 'теперь ластится!')
+#
+#     def purr(self):
+#         print(self.name.title(), 'теперь мурчит!')
+#
+# my_cat = Cat('буся', 9)
+# print('Мою кошку зовут', my_cat.name.title() + '.')
+# print('Моей кошке', my_cat.age, 'лет.')
+# # print(my_cat.name)
+#
+# my_cat.caress()
+# my_cat.purr()
+#
+# print()
+#
+# your_cat = Cat('люси', 10)
+# print('Твою кошку зовут', your_cat.name.title() + '.')
+# print('Твоей кошке', your_cat.age, 'лет.')
+# your_cat.caress()
+# your_cat.purr()
+#
+# print()
 
-    def caress(self):
-        print(self.name.title(), 'теперь ластится!')
-
-    def purr(self):
-        print(self.name.title(), 'теперь мурчит!')
-
-my_cat = Cat('буся', 9)
-print('Мою кошку зовут', my_cat.name.title() + '.')
-print('Моей кошке', my_cat.age, 'лет.')
-# print(my_cat.name)
-
-my_cat.caress()
-my_cat.purr()
-
-print()
-
-your_cat = Cat('люси', 10)
-print('Твою кошку зовут', your_cat.name.title() + '.')
-print('Твоей кошке', your_cat.age, 'лет.')
-your_cat.caress()
-your_cat.purr()
-
-print()
-
-class Restaurant():
-    def __init__(self,  restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
-
-    def describe_restaurant(self):
-        print('Этот ресторан называется', self.restaurant_name + '.')
-        print('Этот ресторан', self.cuisine_type, 'кухни.')
-
-    def open_restaurant(self):
-        print('Ресторан', self.restaurant_name, 'открыт!')
-
-restaurant = Restaurant('Пафос', 'русская')
-print(restaurant.restaurant_name)
-print(restaurant.cuisine_type)
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
-
-restaurant = Restaurant('Пафос', 'русская')
-restaurant.describe_restaurant()
-restaurant = Restaurant('Узбек Плюс', 'узбекская')
-restaurant.describe_restaurant()
-restaurant = Restaurant('Грузинский парень', 'грузинская')
-restaurant.describe_restaurant()
+# class Restaurant():
+#     def __init__(self,  restaurant_name, cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
+#
+#     def describe_restaurant(self):
+#         print('Этот ресторан называется', self.restaurant_name + '.')
+#         print('Этот ресторан', self.cuisine_type, 'кухни.')
+#
+#     def open_restaurant(self):
+#         print('Ресторан', self.restaurant_name, 'открыт!')
+#
+# restaurant = Restaurant('Пафос', 'русская')
+# print(restaurant.restaurant_name)
+# print(restaurant.cuisine_type)
+# restaurant.describe_restaurant()
+# restaurant.open_restaurant()
+#
+# restaurant = Restaurant('Пафос', 'русская')
+# restaurant.describe_restaurant()
+# restaurant = Restaurant('Узбек Плюс', 'узбекская')
+# restaurant.describe_restaurant()
+# restaurant = Restaurant('Грузинский парень', 'грузинская')
+# restaurant.describe_restaurant()
 
 class User():
     def __init__(self, first_name, last_name, age, role):
@@ -1120,10 +1120,33 @@ user3 = User('ваня', 'одариченко', '30', 'пользователь
 user3.describe_user()
 user3.greet_user()
 
+print()
 
+class Car():
+#Простая модель автомобиля."""
+    def __init__(self, make, model, year):
+    #Инициализирует атрибуты описания автомобиля."""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
 
+    def get_descriptive_name(self):
+    #Возвращает аккуратно отформатированное описание."""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
 
+    def read_odometer(self):
+    #Выводит пробег машины в милях
+        print('Эта машина разгоняется до', self.odometer_reading, 'миль/час')
 
+    def update_odometer(self, mileage):
+        self.odometer_reading = mileage
+
+my_new_car = Car('audi', 'a4', 2019)
+print(my_new_car.get_descriptive_name())
+my_new_car.update_odometer(101)
+my_new_car.read_odometer()
 
 
 
