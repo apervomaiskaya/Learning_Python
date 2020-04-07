@@ -1141,18 +1141,63 @@ class Car():
         print('Эта машина разгоняется до', self.odometer_reading, 'миль/час')
 
     def update_odometer(self, mileage):
-        self.odometer_reading = mileage
+        # Устанавливает на одометре заданное значение.
+        # При попытке обратной подкрутки изменение отклоняется.
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print('Вы не можете откручивать одометр назад!')
+
+    def increment_odometer(self, miles):
+        #Увеличивает показания одометра с заданным приращением."""
+        self.odometer_reading += miles
 
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
 my_new_car.update_odometer(101)
 my_new_car.read_odometer()
 
+my_used_car = Car('subaru', 'outback', 2015)
+print(my_used_car.get_descriptive_name())
+my_used_car.update_odometer(2350)
+my_used_car.read_odometer()
+my_used_car.increment_odometer(10)
+my_used_car.read_odometer()
 
+class Restaurant():
+    def __init__(self,  restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
 
+    def describe_restaurant(self):
+        print('Этот ресторан называется', self.restaurant_name + '.')
+        print('Этот ресторан', self.cuisine_type, 'кухни.')
 
+    def open_restaurant(self):
+        print('Ресторан', self.restaurant_name, 'открыт!')
 
+    def read_number_served(self):
+        print(self.restaurant_name, 'обслужил', self.number_served, 'посетителей.')
 
+    def set_number_served(self, number_served):
+        self.number_served = number_served
+
+    def increment_number_served(self, increment):
+        self.number_served += increment
+
+restaurant = Restaurant('Пафос', 'русская')
+print(restaurant.restaurant_name)
+print(restaurant.cuisine_type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+restaurant1 = Restaurant('Запад', 'американская')
+restaurant1.read_number_served()
+restaurant1.set_number_served(15)
+restaurant1.read_number_served()
+restaurant1.increment_number_served(120)
+restaurant1.read_number_served()
 
 
 
