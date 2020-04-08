@@ -1201,6 +1201,20 @@ restaurant1.read_number_served()
 
 print()
 
+class User():
+    def __init__(self, first_name, last_name, age, role):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.role = role
+
+    def describe_user(self):
+        print('\nМеня зовут', self.first_name.title(), self.last_name.title() + '.')
+        print('Мне' , self.age , 'лет. Моя роль в проекте - ', self.role + '.')
+
+    def greet_user(self):
+        print('Здравствуйте,', self.first_name.title(), self.last_name.title() + '!')
+
 
 
 
