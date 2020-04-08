@@ -1207,7 +1207,7 @@ class User():
         self.last_name = last_name
         self.age = age
         self.role = role
-        self.login_attempts = login_attempts
+        self.login_attempts = int(login_attempts)
 
     def describe_user(self):
         print('\nМеня зовут', self.first_name.title(), self.last_name.title() + '.')
@@ -1216,14 +1216,22 @@ class User():
     def greet_user(self):
         print('Здравствуйте,', self.first_name.title(), self.last_name.title() + '!')
 
-    def increment_login_attempts(self, login_attempts):
-        self.login_attempts += login_attempts
+    def increment_login_attempts(self, attempts):
+        self.login_attempts += attempts
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
 
 user1 = User('Олег', 'Кривобоков', 36, 'админ', '15')
 print(user1.first_name)
 print(user1.last_name)
 print(user1.age)
-
+user1.increment_login_attempts(1)
+user1.increment_login_attempts(1)
+user1.increment_login_attempts(1)
+print(user1.login_attempts)
+user1.reset_login_attempts()
+print(user1.login_attempts)
 
 
 
