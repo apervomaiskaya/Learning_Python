@@ -1273,6 +1273,16 @@ my_tesla.fill_gas_tank()
 my_tesla.battery_size.describe_battery()
 my_tesla.battery_size.get_range()
 
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['ваниль', 'клубника', 'банан']
+
+    def show_list_flavors(self):
+        print(self.flavors)
+
+icecreamstand1 = IceCreamStand('sdf', 'xcio')
+icecreamstand1.show_list_flavors()
 
 
 
