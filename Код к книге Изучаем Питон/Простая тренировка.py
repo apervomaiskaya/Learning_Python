@@ -1233,8 +1233,35 @@ print(user1.login_attempts)
 user1.reset_login_attempts()
 print(user1.login_attempts)
 
+class Battery():
+    """Простая модель аккумулятора электромобиля."""
+    def __init__(self, battery_size=75):
+        """Инициализирует атрибуты аккумулятора."""
+        self.battery_size = battery_size
+    def describe_battery(self):
+        """Выводит информацию о мощности аккумулятора."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
 
+class ElectricCar(Car):
+    #Представляет аспекты машины, специфические для электромобилей.
+    def __init__(self, make, model, year):
+        """инициализирует атрибуты класса-родителя."""
+        super().__init__(make, model, year)
+        self.battery_size = Battery()
 
+    def describe_battery(self):
+        """Выводит информацию о мощности аккумулятора."""
+        print(f'This car has a {self.battery_size}-kWh battery.')
+
+    def fill_gas_tank(self):
+        """У электромобилей нет бензобака."""
+        print("У электромобилей нет бензобака!")
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+my_tesla.fill_gas_tank()
+my_tesla.battery_size.describe_battery()
 
 
 
