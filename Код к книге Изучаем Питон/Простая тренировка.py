@@ -1202,11 +1202,12 @@ restaurant1.read_number_served()
 print()
 
 class User():
-    def __init__(self, first_name, last_name, age, role):
+    def __init__(self, first_name, last_name, age, role, login_attempts):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
         self.role = role
+        self.login_attempts = login_attempts
 
     def describe_user(self):
         print('\nМеня зовут', self.first_name.title(), self.last_name.title() + '.')
@@ -1215,6 +1216,13 @@ class User():
     def greet_user(self):
         print('Здравствуйте,', self.first_name.title(), self.last_name.title() + '!')
 
+    def increment_login_attempts(self, login_attempts):
+        self.login_attempts += login_attempts
+
+user1 = User('Олег', 'Кривобоков', 36, 'админ', '15')
+print(user1.first_name)
+print(user1.last_name)
+print(user1.age)
 
 
 
