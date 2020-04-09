@@ -1284,10 +1284,16 @@ class IceCreamStand(Restaurant):
 icecreamstand1 = IceCreamStand('sdf', 'xcio')
 icecreamstand1.show_list_flavors()
 
+class Admin(User):
+    def __init__(self, first_name, last_name, age, role, login_attempts):
+        super().__init__(first_name, last_name, age, role, login_attempts)
+        self.privileges = ['разрешено добавлять сообщения', 'разрешено удалять пользователей', 'разрешено банить пользователей']
 
+    def show_privileges(self):
+        print(self.privileges)
 
-
-
+admin1 = Admin('sdf', 'lk;', '48', 'admin', 4)
+admin1.show_privileges()
 
 
 
