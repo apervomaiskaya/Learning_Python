@@ -1295,10 +1295,18 @@ class Admin(User):
 admin1 = Admin('sdf', 'lk;', '48', 'admin', 4)
 admin1.show_privileges()
 
+class Privileges(Admin):
+    def __init__(self):
+        self.privileges = ['разрешено банить пользователей', 'разрешено громко смеяться']
 
+    def show_privileges(self):
+        print(self.privileges)
 
+privileges1 = Privileges()
+privileges1.show_privileges()
 
-
+admin2 = Admin('Углук', 'Тузлук', 48, 'admin', 4)
+admin2.show_privileges()
 
 
 
