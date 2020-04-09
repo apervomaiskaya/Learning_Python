@@ -1251,6 +1251,11 @@ class Battery():
             range = 315
         print('This car can go about', range, 'miles on a full charge.')
 
+    def upgrade_battery(self):
+        if self.battery_size != 100:
+            self.battery_size = 100
+            print('Мощность батареи увеличена до 100%!')
+
 class ElectricCar(Car):
     #Представляет аспекты машины, специфические для электромобилей.
     def __init__(self, make, model, year):
@@ -1308,8 +1313,10 @@ privileges1.show_privileges()
 admin2 = Admin('Углук', 'Тузлук', 48, 'admin', 4)
 admin2.show_privileges()
 
-
-
+electriccar1 = ElectricCar('yamaha', 'gt-19', 2018)
+electriccar1.battery_size.describe_battery()
+electriccar1.battery_size.upgrade_battery()
+electriccar1.battery_size.describe_battery()
 
 
 
