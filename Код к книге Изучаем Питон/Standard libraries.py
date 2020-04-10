@@ -30,8 +30,30 @@ for i3 in lottery:
     i3 = choice(lottery)
 for i4 in lottery:
     i4 = choice(lottery)
+for i5 in lottery:
+    i5 = choice(lottery)
 
-print('Билет, содержащий эту комбинацию из цифр и букв, является выигрышной:', [i1, i2, i3, i4])
+print('Билет, содержащий эту комбинацию из цифр и букв, является выигрышным:', [i1, i2, i3, i4, i5])
+x = [i1, i2, i3, i4, i5]
+my_ticket = ['', 5, 'б', 9, 'д']
+
+# for x in lottery:
+#     if x not in my_ticket:
+#         print('Комбинация', i1, i2, i3, i4, i5, 'не выиграла.')
+#     else:
+#         print('Комбинация', my_ticket, 'выиграла!')
+
+for a in x:
+    if a not in my_ticket:
+        print('Комбинация', i1, i2, i3, i4, i5, 'не выиграла.')
+    if a in my_ticket:
+        print('Комбинация', my_ticket, 'выиграла!')
+
+
+
+
+
+
 
 
 
