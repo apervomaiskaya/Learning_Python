@@ -94,13 +94,15 @@
 # with open('guest.txt', 'w') as file_object:
 #     file_object.write(a)
 
-while True:
-    prompt = 'Как ваше имя?'
+
+prompt = 'Если хотите закончить, напишите "выход"'
+prompt = 'Как ваше имя?'
+while prompt != 'выход':
     a = input(prompt)
-    print('Привет,', a, '!')
+    print('Привет,', a + '!')
     with open('guest_book.txt', 'a') as file_object:
-        file_object.write(a)
-        continue
+        file_object.write('Рады вас видеть!\n')
+
 
 
 
