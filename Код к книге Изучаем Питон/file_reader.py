@@ -47,23 +47,199 @@
 #     for line in file_object:
 #         print(line.strip())
 
-print()
+# print()
+#
+# filename = 'pi_digits.txt'
+# with open(filename) as file_object:
+#     #lines = file_object.read()
+#     for line in file_object:
+#         #line.replace('file', 'dfg')
+#         print(line.rstrip())
+#
+#     message = 'file.'
+#     message.replace('file', 'cat')
+#
+#     print(message)
 
-filename = 'pi_digits.txt'
-with open(filename) as file_object:
-    #lines = file_object.read()
-    for line in file_object:
-        #line.replace('file', 'dfg')
-        print(line.rstrip())
+# message = 'I really like dogs.'
+# message.replace('dogs', 'cats')
+# print(message)
 
-    message = 'file.'
-    message.replace('file', 'cat')
+# filename = 'programming.txt'
+#
+# with open(filename, 'w') as file_object:
+#     file_object.write('Я люблю программировать!')
 
-    print(message)
+# filename = 'programming.doc'
+#
+# with open(filename, 'w') as file_object:
+#     file_object.write('48 dgd I love programming!, Я люблю программировать!\n')
+#     file_object.write('45 ghe I love programming!, Я люблю программировать!\n')
+#
+# with open(filename, 'a') as file_object:
+#     file_object.write('Также я люблю искать значения в наборах данных.\n')
+#
+# filename = 'programming.txt'
+#
+# with open(filename, 'w') as file_object:
+#     file_object.write('48 dgd I love programming!, Я люблю программировать!\n')
+#     file_object.write('45 ghe I love programming!, Я люблю программировать!\n')
+#
+# with open(filename, 'a') as file_object:
+#     file_object.write('Также я люблю искать значения в наборах данных.\n')
 
-message = "I really like dogs."
-message.replace('dogs', 'cats')
-print(message)
+# prompt = 'Какая у вас погода?'
+# a = input(prompt)
+# # print(a)
+# with open('guest.txt', 'w') as file_object:
+#     file_object.write(a)
+
+while True:
+    prompt = 'Как ваше имя?'
+    a = input(prompt)
+    print('Привет,', a, '!')
+    with open('guest_book.txt', 'a') as file_object:
+        file_object.write(a)
+        continue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
