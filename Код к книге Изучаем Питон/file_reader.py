@@ -88,36 +88,31 @@
 # with open(filename, 'a') as file_object:
 #     file_object.write('Также я люблю искать значения в наборах данных.\n')
 
-# prompt = 'Какая у вас погода?'
-# a = input(prompt)
-# # print(a)
-# with open('guest.txt', 'w') as file_object:
-#     file_object.write(a)
-
 # prompt = 'Если хотите закончить, напишите "выход"'
-# prompt = 'Как ваше имя?'
+# prompt = 'Как ваше имя? '
 # active = True
 # while active:
 #     message = input(prompt)
-#     if message == 'quit':
+#     if message == 'выход':
 #         active = False
 #     else:
-#         print(message)
+#         print('Привет,', message.title() + '!')
+#         with open('guest_book.txt', 'a') as file_object:
+#             file_object.write(message.title())
+#             file_object.write(', рады вас видеть!\n')
 
 prompt = 'Если хотите закончить, напишите "выход"'
-prompt = 'Как ваше имя? '
+prompt = 'Почему вам нравится программировать? '
 active = True
 while active:
     message = input(prompt)
     if message == 'выход':
         active = False
     else:
-        print('Привет,', message.title() + '!')
-        with open('guest_book.txt', 'a') as file_object:
-            file_object.write(message.title())
-            file_object.write(', рады вас видеть!\n')
-
-
+        print('Вам нравится программировать, потому что', message)
+        with open('pool.txt', 'a') as file_object:
+            file_object.write(message)
+            file_object.write('\n')
 
 
 
