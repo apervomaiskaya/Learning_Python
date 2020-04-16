@@ -22,7 +22,7 @@ print()
 #     else:
 #         print(answer)
 
-filename = 'alice.txt'
+filename = 'cats.txt'
 try:
     with open(filename, encoding='utf-8') as f:
         contents = f.read()
@@ -35,24 +35,29 @@ except FileNotFoundError:
 # #with open(filename, 'a') as file_object:
 #     file_object.write('Метод split() разделяет строку')
 
-prompt = 'Напишите "выход", чтобы выйти'
-while True:
-    first_number = input('Введите первое число: ')
-    if first_number == 'выход':
-        break
+# prompt = 'Напишите "выход", чтобы выйти'
+# while True:
+#     first_number = input('Введите первое число: ')
+#     if first_number == 'выход':
+#         break
+#
+#     second_number = input('Введите второе число: ')
+#     if second_number == 'выход':
+#         break
+#
+#     try:
+#         answer = int(first_number) + int(second_number)
+#         print(answer)
+#
+#     except ValueError:
+#         print('Вы можете вводить только цифры')
 
-    second_number = input('Введите второе число: ')
-    if second_number == 'выход':
-        break
-
-    try:
-        answer = int(first_number) + int(second_number)
-        print(answer)
-
-    except ValueError:
-        print('Вы можете вводить только цифры')
-
-
+filename = 'E:\Другие загрузки\Обучение\Код к книге Изучаем Питон\cats.txt'
+try:
+    with open(filename, encoding='utf-8') as f:
+        contents = f.read()
+except FileNotFoundError:
+    print('Файл', filename, 'не найден')
 
 
 
