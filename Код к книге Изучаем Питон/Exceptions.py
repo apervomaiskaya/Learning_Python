@@ -52,12 +52,23 @@ except FileNotFoundError:
 #     except ValueError:
 #         print('Вы можете вводить только цифры')
 
-filename = 'E:\Другие загрузки\Обучение\Код к книге Изучаем Питон\cats.txt'
+file1 = 'cats.txt'
+file2 = 'dogs.txt'
+
 try:
-    with open(filename, encoding='utf-8') as f:
+    with open(file1, encoding='utf-8') as f:
         contents = f.read()
+        print(contents)
+
+    print()
+
+    with open(file2, encoding='utf-8') as f:
+        contents = f.read()
+        print(contents)
+
 except FileNotFoundError:
-    print('Файл', filename, 'не найден')
+    print('Файл', file1, 'не найден')
+
 
 
 
