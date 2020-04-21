@@ -31,6 +31,7 @@ greet_user()
 
 import json
 filename = 'favorite number.json'
+
 # Здесь загружает любимое число из файла
 try:
     with open(filename) as f_obj:
