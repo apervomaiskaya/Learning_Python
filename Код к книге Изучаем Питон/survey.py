@@ -1,4 +1,4 @@
-class AnonymousSurvey():
+class AnonymousSurvey:
     # Сбор анонимных ответов на опросы.
     def __init__(self, question):
         # Сохраняет вопрос и готовится к сохранению ответов."""
