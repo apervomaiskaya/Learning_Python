@@ -1,21 +1,83 @@
-import unittest
-from name_function import get_formatted_name
+# import unittest
+# from name_function import get_formatted_name
+#
+#
+# class NamesTestCase(unittest.TestCase):
+#     # Тесты для "name_function"
+#
+#     def test_first_last_name(self):
+#         # Имена вида 'Janis Joplin' работают правильно?
+#         formatted_name = get_formatted_name('janis', 'joplin')
+#         self.assertEqual(formatted_name, 'Janis Joplin')
+#
+#     def test_first_last_middle_name(self):
+#         # Работают ли такие имена, как 'Wolfgang Amadeus Mozart'?"""
+#         formatted_name = get_formatted_name(
+#             'wolfgang', 'mozart', 'amadeus')
+#         self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
+#
+#
+# if __name__ == '__main__':
+#     unittest.main()
 
+import unittest
+from name_function import get_formatted_name1
 
 class NamesTestCase(unittest.TestCase):
-    # Тесты для "name_function"
-
+    # Тесты для "name_function.py"
     def test_first_last_name(self):
-        # Имена вида 'Janis Joplin' работают правильно?
-        formatted_name = get_formatted_name('janis', 'joplin')
-        self.assertEqual(formatted_name, 'Janis Joplin')
-
-    def test_first_last_middle_name(self):
-        # Работают ли такие имена, как 'Wolfgang Amadeus Mozart'?"""
-        formatted_name = get_formatted_name(
-            'wolfgang', 'mozart', 'amadeus')
-        self.assertEqual(formatted_name, 'Wolfgang Amadeus Mozart')
+        #Имена вида 'Дженис Джоплин' работают правильно?
+        formatted_name1 = get_formatted_name1('Дженис', 'Джоплин')
+        self.assertEqual(formatted_name1, 'Дженис Джоплин')
 
 
 if __name__ == '__main__':
     unittest.main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
